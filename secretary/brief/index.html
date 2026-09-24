@@ -1,0 +1,164 @@
+<title>岳燈 今日の段取り</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap">
+<style>
+:root{
+  --bg:#EEF1F3; --card:#FFFFFF; --ink:#15202B; --sub:#5D6B78; --line:#D5DCE2;
+  --must:#C0392B; --must-bg:#FBEAE7; --now:#0E7C74; --now-bg:#DDF1EE; --done:#8A97A3;
+  --warn:#B7791F;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F151B; --card:#18212A; --ink:#E7EDF2; --sub:#95A3B0; --line:#2A3641;
+    --must:#F07B6B; --must-bg:#3A1F1C; --now:#4FC7BA; --now-bg:#12302D; --done:#62707C; --warn:#E0A94A;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F151B; --card:#18212A; --ink:#E7EDF2; --sub:#95A3B0; --line:#2A3641;
+  --must:#F07B6B; --must-bg:#3A1F1C; --now:#4FC7BA; --now-bg:#12302D; --done:#62707C; --warn:#E0A94A;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Sans","Hiragino Kaku Gothic ProN",system-ui,sans-serif;
+  font-size:13.5px;line-height:1.3;margin:0;padding-inline:16px;padding-block:8px 10px;font-variant-numeric:tabular-nums}
+.wrap{max-width:430px;margin:0 auto;display:flex;flex-direction:column;gap:6px}
+header{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.date{font-weight:900;font-size:18px;letter-spacing:.02em}
+.stamp{font-size:11px;color:var(--sub)}
+.lead{font-weight:700;font-size:13.5px;background:var(--must-bg);color:var(--must);border-radius:8px;padding:5px 10px}
+h2{font-size:11px;letter-spacing:.12em;color:var(--sub);margin:0 0 4px;font-weight:700}
+section{background:var(--card);border-radius:10px;padding:6px 10px}
+section.must{border:2px solid var(--must)}
+.must h2{color:var(--must)}
+ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.task{display:grid;grid-template-columns:26px 1fr auto;align-items:center;gap:6px;min-height:32px}
+.task input{width:22px;height:22px;accent-color:var(--now);margin:0}
+.task .t{font-weight:700;font-size:14.5px}
+.task .n{display:block;font-weight:400;font-size:11.5px;color:var(--sub)}
+.task .w{font-size:11.5px;color:var(--must);font-weight:700;text-align:right;white-space:nowrap}
+.task.is-done .t,.task.is-done .w{color:var(--done);text-decoration:line-through}
+.tl li{display:grid;grid-template-columns:92px 1fr;gap:4px;padding:2px 6px;border-radius:6px;font-size:12.5px}
+.tl .tm{color:var(--sub);white-space:nowrap}
+.tl .lb b{font-weight:700}
+.tl .job .lb{color:var(--sub)}
+.tl .now{background:var(--now-bg)}
+.tl .now .tm{color:var(--now);font-weight:700}
+.tl .past{opacity:.45}
+.dl li{display:grid;grid-template-columns:78px 1fr auto;gap:6px;font-size:12.5px;align-items:baseline}
+.dl .d{font-weight:700;white-space:nowrap}
+.dl .p{color:var(--sub);font-size:11.5px}
+.dl .c{font-size:11.5px;font-weight:700;color:var(--warn);white-space:nowrap}
+.dl .c.today{color:var(--must)}
+.row2{display:grid;grid-template-columns:1fr;gap:8px}
+.dec li{font-size:12.5px;color:var(--sub)}
+.dec b{color:var(--ink)}
+.next{font-size:12px;color:var(--sub);padding-inline:2px}
+.next b{color:var(--ink)}
+@media (prefers-reduced-motion:no-preference){.tl .now{transition:background .3s}}
+</style>
+
+<div class="wrap" id="app"></div>
+
+<!-- 秘書が毎朝この JSON だけを書き換える -->
+<script id="brief" type="application/json">
+{
+  "date": "2026-09-24",
+  "label": "9/24（木）",
+  "updated": "19:50 更新",
+  "lead": "今日のKPIが未完了。帰りの電車で片づけよう",
+  "must": [
+    {"id": "kpi", "label": "循環器 15フォロー・20リプ", "note": "今日のKPI・未完了", "when": "帰りの電車"},
+    {"id": "nippo", "label": "日報", "note": "寝る前に", "when": "〜23:00"},
+    {"id": "yoshuku", "label": "予祝", "note": "朝に済んでいればチェック", "when": "済んだ？"}
+  ],
+  "timeline": [
+    {"s": "08:45", "e": "19:45", "label": "勤務", "kind": "job"},
+    {"s": "19:45", "e": "20:45", "label": "帰りの電車", "task": "KPI 15フォロー・20リプ"},
+    {"s": "21:30", "e": "22:45", "label": "自由時間", "task": "休む（作業なし）"},
+    {"s": "22:45", "e": "23:00", "label": "寝る前", "task": "日報"}
+  ],
+  "deadlines": [
+    {"d": "9/27（日）", "label": "週次報告 12:00〆", "prep": "土曜夜に数値を送る", "days": 3},
+    {"d": "9/28（月）", "label": "投稿提出", "prep": "日曜午後に確認・予約", "days": 4},
+    {"d": "10/2（金）", "label": "月次報告（9月分）", "prep": "火曜夜に下書き確認", "days": 8}
+  ],
+  "decisions": [
+    {"label": "Threadsの発信テーマ", "due": "10/5", "mins": 2}
+  ],
+  "tomorrow": "<b>明日 9/25（金）</b> 飲み会の日。KPIは<b>行きの電車</b>で"
+}
+</script>
+
+<script>
+(function(){
+  var data = JSON.parse(document.getElementById('brief').textContent);
+  var app = document.getElementById('app');
+  var key = 'gakuto-brief-' + data.date;
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(key) || '{}') || {}; } catch(e) { saved = {}; }
+
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function mins(t){ var p = t.split(':'); return (+p[0])*60 + (+p[1]); }
+
+  var h = '';
+  h += '<header><div class="date">' + esc(data.label) + '</div><div class="stamp">' + esc(data.updated) + '</div></header>';
+  if (data.lead) h += '<div class="lead">' + esc(data.lead) + '</div>';
+
+  h += '<section class="must"><h2>今日中に必ず</h2><ul>';
+  data.must.forEach(function(m){
+    var on = !!saved[m.id];
+    h += '<li><label class="task' + (on ? ' is-done' : '') + '" for="c-' + m.id + '">' +
+         '<input type="checkbox" id="c-' + m.id + '" data-id="' + m.id + '"' + (on ? ' checked' : '') + '>' +
+         '<span><span class="t">' + esc(m.label) + '</span><span class="n">' + esc(m.note || '') + '</span></span>' +
+         '<span class="w">' + esc(m.when || '') + '</span></label></li>';
+  });
+  h += '</ul></section>';
+
+  h += '<section><h2>タイムスケジュール</h2><ul class="tl" id="tl">';
+  data.timeline.forEach(function(r, i){
+    h += '<li class="' + (r.kind === 'job' ? 'job' : '') + '" data-s="' + r.s + '" data-e="' + r.e + '">' +
+         '<span class="tm">' + r.s + '–' + r.e + '</span>' +
+         '<span class="lb">' + esc(r.label) + (r.task ? '：<b>' + esc(r.task) + '</b>' : '') + '</span></li>';
+  });
+  h += '</ul></section>';
+
+  h += '<section><h2>近い締切</h2><ul class="dl">';
+  data.deadlines.forEach(function(d){
+    var c = d.days === 0 ? '<span class="c today">今日</span>' : '<span class="c">あと' + d.days + '日</span>';
+    h += '<li><span class="d">' + esc(d.d) + '</span><span>' + esc(d.label) + '<br><span class="p">' + esc(d.prep) + '</span></span>' + c + '</li>';
+  });
+  h += '</ul></section>';
+
+  if (data.decisions && data.decisions.length){
+    h += '<section><h2>隙間時間があれば（決裁）</h2><ul class="dec">';
+    data.decisions.forEach(function(d){
+      h += '<li><b>' + esc(d.label) + '</b>　期限 ' + esc(d.due) + '・約' + d.mins + '分</li>';
+    });
+    h += '</ul></section>';
+  }
+  if (data.tomorrow) h += '<div class="next">' + data.tomorrow + '</div>';
+  app.innerHTML = h;
+
+  app.addEventListener('change', function(e){
+    var el = e.target; if (!el.dataset || !el.dataset.id) return;
+    saved[el.dataset.id] = el.checked;
+    el.closest('.task').classList.toggle('is-done', el.checked);
+    try { localStorage.setItem(key, JSON.stringify(saved)); } catch(err) {}
+  });
+
+  function markNow(){
+    var d = new Date();
+    var today = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+    if (today !== data.date) return;
+    var n = d.getHours()*60 + d.getMinutes();
+    document.querySelectorAll('#tl li').forEach(function(li){
+      var s = mins(li.dataset.s), e = mins(li.dataset.e);
+      li.classList.toggle('now', n >= s && n < e);
+      li.classList.toggle('past', n >= e);
+    });
+  }
+  markNow(); setInterval(markNow, 60000);
+})();
+</script>
