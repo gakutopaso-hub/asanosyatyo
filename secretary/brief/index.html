@@ -65,21 +65,28 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 <!-- 秘書が毎朝この JSON だけを書き換える -->
 <script id="brief" type="application/json">
 {
-  "date": "2026-09-25",
-  "label": "9/25（金）",
-  "updated": "15:00 更新",
-  "lead": "KPI残り 13フォロー・10リプ。帰りの電車で2コマ",
+  "date": "2026-09-26",
+  "label": "9/26（土）",
+  "wake": "7:00",
+  "updated": "前夜22:00作成",
+  "lead": "夜に今週の数値を送る（明日12時の週次報告用）",
   "must": [
     {
       "id": "kpi",
-      "label": "KPI 残り13フォロー・10リプ",
-      "note": "済: 2フォロー・10リプ／30分で8フォローが上限",
-      "when": "帰りの電車"
+      "label": "KPI 15フォロー・20リプ",
+      "note": "金曜の残りがあれば先に",
+      "when": "電車3コマ"
     },
     {
       "id": "fb",
       "label": "Facebookコメント",
       "note": "約10分",
+      "when": "帰りの電車"
+    },
+    {
+      "id": "num",
+      "label": "今週の数値を送る",
+      "note": "スクショでOK→社員が下書き",
       "when": "帰宅後"
     },
     {
@@ -91,54 +98,54 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
   ],
   "timeline": [
     {
-      "s": "08:45",
-      "e": "19:30",
-      "label": "勤務",
+      "s": "08:00",
+      "e": "09:00",
+      "label": "行きの電車",
+      "task": "KPI①② 15フォロー"
+    },
+    {
+      "s": "09:00",
+      "e": "18:00",
+      "label": "臨時出勤（棚卸し）",
       "kind": "job"
     },
     {
-      "s": "19:45",
-      "e": "22:45",
-      "label": "飲み会",
-      "task": "神明トリキ"
+      "s": "18:00",
+      "e": "20:00",
+      "label": "志 関西飲み会",
+      "task": "大阪"
     },
     {
-      "s": "22:45",
-      "e": "23:15",
-      "label": "帰りの電車①",
-      "task": "8フォロー・5リプ"
+      "s": "20:00",
+      "e": "21:00",
+      "label": "帰りの電車",
+      "task": "KPI③ 20リプ＋FB"
     },
     {
-      "s": "23:15",
-      "e": "23:45",
-      "label": "帰りの電車②",
-      "task": "5フォロー・5リプ"
-    },
-    {
-      "s": "23:45",
-      "e": "23:59",
+      "s": "21:00",
+      "e": "23:00",
       "label": "帰宅後",
-      "task": "FB10分→予祝・日報20分"
+      "task": "数値送付→予祝・日報"
     }
   ],
   "deadlines": [
     {
       "d": "9/27（日）",
       "label": "週次報告 12:00〆",
-      "prep": "土曜夜に数値を送る",
-      "days": 2
+      "prep": "朝に下書きを確認して提出",
+      "days": 1
     },
     {
       "d": "9/28（月）",
       "label": "投稿提出",
       "prep": "日曜午後に確認・予約",
-      "days": 3
+      "days": 2
     },
     {
       "d": "10/2（金）",
       "label": "月次報告（9月分）",
       "prep": "火曜夜に下書き確認",
-      "days": 7
+      "days": 6
     }
   ],
   "decisions": [
@@ -148,7 +155,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明日 9/26（土）</b>の段取り表は<b>今夜22:00</b>に出します"
+  "tomorrow": "<b>明日 9/27（日）</b> 週次報告<b>12:00〆</b>、午後に投稿を予約"
 }
 </script>
 
