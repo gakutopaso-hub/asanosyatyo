@@ -65,34 +65,34 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 <!-- 秘書が毎朝この JSON だけを書き換える -->
 <script id="brief" type="application/json">
 {
-  "date": "2026-09-26",
-  "label": "9/26（土）",
-  "wake": "7:00",
-  "updated": "前夜更新",
-  "lead": "スプシで今週を振り返る → スクショを送る（明日12時の週次報告用）",
+  "date": "2026-09-27",
+  "label": "9/27（日）",
+  "wake": "8:00",
+  "updated": "前夜22:00作成",
+  "lead": "12:00 週次報告〆。数値が未送信なら朝いちで送る",
   "must": [
     {
+      "id": "weekly",
+      "label": "週次報告を提出",
+      "note": "新しい取り組みの提案1つ入り",
+      "when": "〜12:00"
+    },
+    {
+      "id": "post",
+      "label": "9/28分の投稿を確認・予約",
+      "note": "下書きを確認するだけ",
+      "when": "午後"
+    },
+    {
       "id": "kpi",
-      "label": "KPI 15フォロー・20リプ",
-      "note": "金曜の残りがあれば先に",
+      "label": "KPI 15フォロー・20リプ＋FB",
+      "note": "30分×3コマ＋FB10分。昨日の残りも",
       "when": "3コマ"
     },
     {
-      "id": "fb",
-      "label": "Facebookコメント",
-      "note": "約10分",
-      "when": "京都→大阪"
-    },
-    {
-      "id": "review",
-      "label": "振り返り（スプシ記入）",
-      "note": "フォロー・交流・フォロワー数。9/20〜の空欄も",
-      "when": "帰りの電車"
-    },
-    {
-      "id": "yoshuku",
-      "label": "予祝",
-      "note": "実家に着いたら",
+      "id": "night",
+      "label": "予祝＋振り返り",
+      "note": "今日の数をスプシに記入",
       "when": "寝る前"
     }
   ],
@@ -100,52 +100,52 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
     {
       "s": "08:00",
       "e": "09:00",
-      "label": "行きの電車",
-      "task": "KPI①② 15フォロー"
+      "label": "起床・朝",
+      "task": "数値未送信なら送る"
     },
     {
       "s": "09:00",
-      "e": "18:00",
-      "label": "臨時出勤（京都）",
-      "kind": "job"
+      "e": "10:30",
+      "label": "週次報告",
+      "task": "下書き確認→提出"
     },
     {
-      "s": "18:00",
-      "e": "19:30",
-      "label": "京都→大阪（50分）",
-      "task": "KPI③＋FB"
+      "s": "10:30",
+      "e": "11:30",
+      "label": "KPI①②",
+      "task": "15フォロー"
     },
     {
-      "s": "19:30",
-      "e": "22:30",
-      "label": "志 関西飲み会",
-      "task": "遅れて参加"
+      "s": "14:00",
+      "e": "15:30",
+      "label": "投稿の確認・予約",
+      "task": "9/28分"
     },
     {
-      "s": "22:30",
-      "e": "23:30",
-      "label": "実家へ（20分）",
-      "task": "振り返り→スクショ送付"
+      "s": "19:00",
+      "e": "19:40",
+      "label": "KPI③＋FB",
+      "task": "20リプ・FB10分"
     }
   ],
   "deadlines": [
     {
       "d": "9/27（日）",
       "label": "週次報告 12:00〆",
-      "prep": "朝に下書きを確認して提出",
-      "days": 1
+      "prep": "9:00から確認",
+      "days": 0
     },
     {
       "d": "9/28（月）",
       "label": "投稿提出",
-      "prep": "日曜午後に確認・予約",
-      "days": 2
+      "prep": "今日の午後に予約",
+      "days": 1
     },
     {
       "d": "10/2（金）",
       "label": "月次報告（9月分）",
       "prep": "火曜夜に下書き確認",
-      "days": 6
+      "days": 5
     }
   ],
   "decisions": [
@@ -155,7 +155,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明日 9/27（日）</b> 週次報告<b>12:00〆</b>、午後に投稿を予約"
+  "tomorrow": "<b>明日 9/28（月）</b> 9:00 山田さん／10:00 内山さん／14:30勤務／21:00 MTG"
 }
 </script>
 
