@@ -65,29 +65,29 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 <!-- 秘書が毎朝この JSON だけを書き換える -->
 <script id="brief" type="application/json">
 {
-  "date": "2026-09-27",
-  "label": "9/27（日）",
+  "date": "2026-09-28",
+  "label": "9/28（月）",
   "wake": "8:00",
   "updated": "前夜22:00作成",
-  "lead": "12:00 週次報告〆。数値が未送信なら朝いちで送る",
+  "lead": "今日は投稿提出の締切。午前中に済ませる",
   "must": [
     {
-      "id": "weekly",
-      "label": "週次報告を提出",
-      "note": "新しい取り組みの提案1つ入り",
-      "when": "〜12:00"
-    },
-    {
       "id": "post",
-      "label": "9/28分の投稿を確認・予約",
-      "note": "下書きを確認するだけ",
-      "when": "午後"
+      "label": "循環器 投稿提出",
+      "note": "昨日予約済みなら確認だけ",
+      "when": "10:30〜"
     },
     {
       "id": "kpi",
       "label": "KPI 15フォロー・20リプ＋FB",
-      "note": "30分×3コマ＋FB10分。昨日の残りも",
+      "note": "30分×3コマ＋FB10分",
       "when": "3コマ"
+    },
+    {
+      "id": "memo",
+      "label": "持ち札メモ＋X動画視聴",
+      "note": "9/30 MTG用／動画30分",
+      "when": "11:30〜"
     },
     {
       "id": "night",
@@ -98,54 +98,61 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
   ],
   "timeline": [
     {
-      "s": "08:00",
-      "e": "09:00",
-      "label": "起床・朝",
-      "task": "数値未送信なら送る"
+      "s": "08:15",
+      "e": "08:45",
+      "label": "KPI①",
+      "task": "8フォロー"
     },
     {
       "s": "09:00",
       "e": "10:30",
-      "label": "週次報告",
-      "task": "下書き確認→提出"
+      "label": "MTG",
+      "task": "山田さん・内山さん",
+      "kind": "job"
     },
     {
       "s": "10:30",
-      "e": "11:30",
-      "label": "KPI①②",
-      "task": "15フォロー"
+      "e": "12:30",
+      "label": "自由時間",
+      "task": "投稿→KPI②→持ち札・動画"
     },
     {
-      "s": "14:00",
-      "e": "15:30",
-      "label": "投稿の確認・予約",
-      "task": "9/28分"
+      "s": "13:30",
+      "e": "14:30",
+      "label": "行きの電車",
+      "task": "KPI③＋FB"
     },
     {
-      "s": "19:00",
-      "e": "19:40",
-      "label": "KPI③＋FB",
-      "task": "20リプ・FB10分"
+      "s": "14:30",
+      "e": "20:00",
+      "label": "勤務",
+      "kind": "job"
+    },
+    {
+      "s": "21:00",
+      "e": "22:00",
+      "label": "地域創生メンターMTG",
+      "task": "帰宅直後"
     }
   ],
   "deadlines": [
     {
-      "d": "9/27（日）",
-      "label": "週次報告 12:00〆",
-      "prep": "9:00から確認",
-      "days": 0
-    },
-    {
-      "d": "9/28（月）",
-      "label": "投稿提出",
-      "prep": "今日の午後に予約",
-      "days": 1
+      "d": "9/30（水）",
+      "label": "アウトプットMTG 21:00",
+      "prep": "今日持ち札メモを読む",
+      "days": 2
     },
     {
       "d": "10/2（金）",
       "label": "月次報告（9月分）",
       "prep": "火曜夜に下書き確認",
-      "days": 5
+      "days": 4
+    },
+    {
+      "d": "10/4（日）",
+      "label": "週次報告 12:00〆",
+      "prep": "土曜夜に数値を送る",
+      "days": 6
     }
   ],
   "decisions": [
@@ -155,7 +162,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明日 9/28（月）</b> 9:00 山田さん／10:00 内山さん／14:30勤務／21:00 MTG"
+  "tomorrow": "<b>明日 9/29（火）</b> 勤務→19:00〜 月次の下書き確認／21:30 宝田さんMTG"
 }
 </script>
 
