@@ -65,24 +65,12 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 <!-- 秘書が毎朝この JSON だけを書き換える -->
 <script id="brief" type="application/json">
 {
-  "date": "2026-10-08",
-  "label": "10/8（木）",
+  "date": "2026-10-09",
+  "label": "10/9（金）",
   "wake": "6:30",
   "updated": "前夜22:00作成",
-  "lead": "投稿の修正日。電車で修正→夜に予約。就寝0:05",
+  "lead": "帰宅21時。夜はKPIとお風呂だけで早めに休む",
   "must": [
-    {
-      "id": "fix",
-      "label": "投稿の修正（堀さんと）",
-      "note": "行き・帰りの電車でKPIのあと15分ずつ",
-      "when": "電車"
-    },
-    {
-      "id": "rsv",
-      "label": "投稿予約",
-      "note": "OKが出た分から",
-      "when": "22:15〜"
-    },
     {
       "id": "kpi",
       "label": "KPI 15フォロー・20リプ（6枠）",
@@ -90,10 +78,16 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "when": "6枠"
     },
     {
+      "id": "study",
+      "label": "電車で紙の勉強 1時間",
+      "note": "行き30分＋帰り30分",
+      "when": "電車"
+    },
+    {
       "id": "left",
       "label": "昨日の残り（済なら✓）",
-      "note": "未提出の投稿があれば",
-      "when": "朝"
+      "note": "投稿予約",
+      "when": "夜"
     }
   ],
   "timeline": [
@@ -107,7 +101,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "s": "07:45",
       "e": "21:00",
       "label": "勤務8:45〜",
-      "task": "電車でKPI②③→修正",
+      "task": "電車でKPI②③・紙で勉強",
       "kind": "job"
     },
     {
@@ -119,40 +113,40 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
     {
       "s": "22:00",
       "e": "22:45",
-      "label": "KPI④→投稿予約",
-      "task": "30分"
-    },
-    {
-      "s": "22:45",
-      "e": "23:30",
-      "label": "KPI⑤→お風呂",
+      "label": "KPI④→お風呂",
       "task": ""
     },
     {
-      "s": "23:30",
-      "e": "00:05",
-      "label": "KPI⑥",
-      "task": "→予祝・振り返り→就寝"
+      "s": "22:45",
+      "e": "23:25",
+      "label": "KPI⑤→FB→KPI⑥",
+      "task": ""
+    },
+    {
+      "s": "23:25",
+      "e": "23:45",
+      "label": "予祝・振り返り",
+      "task": "→就寝"
     }
   ],
   "deadlines": [
     {
-      "d": "今日",
-      "label": "投稿の修正・予約",
-      "prep": "堀さんと修正→予約",
-      "days": 0
-    },
-    {
       "d": "10/10（土）",
       "label": "週次報告の文章",
-      "prep": "土曜の午前",
-      "days": 2
+      "prep": "明日の午前",
+      "days": 1
     },
     {
       "d": "10/14（水）",
       "label": "薬剤師 評価テスト",
       "prep": "土日で勉強12時間",
-      "days": 6
+      "days": 5
+    },
+    {
+      "d": "10/17（土）",
+      "label": "投稿（10/18分）提出",
+      "prep": "テスト明けから作成",
+      "days": 8
     }
   ],
   "decisions": [
@@ -162,7 +156,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明日 10/9（金）</b> 8:45〜19:30勤務。夜は短いので早めに休む"
+  "tomorrow": "<b>明日 10/10（土）</b> 午前に週次の文章→勉強7時間"
 }
 </script>
 
