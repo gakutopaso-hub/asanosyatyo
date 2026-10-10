@@ -65,35 +65,35 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 <!-- 秘書が毎朝この JSON だけを書き換える -->
 <script id="brief" type="application/json">
 {
-  "date": "2026-10-10",
-  "label": "10/10（土）",
+  "date": "2026-10-11",
+  "label": "10/11（日）",
   "wake": "7:00",
   "updated": "前夜22:00作成",
-  "lead": "午前に週次の文章→勉強7時間。夜は休む",
+  "lead": "朝いちで週次を提出→勉強5時間",
   "must": [
     {
       "id": "weekly",
-      "label": "週次報告の文章を完成",
-      "note": "明日はスクショを貼るだけに",
+      "label": "週次報告を提出（12:00締切）",
+      "note": "スクショを貼って出すだけ",
       "when": "8:00〜"
     },
     {
       "id": "study",
-      "label": "評価テストの勉強 7時間",
-      "note": "午前2.75h・午後2.75h・夕方1.5h",
-      "when": "9:10〜"
+      "label": "評価テストの勉強 5時間",
+      "note": "午前3.25h＋午後1.75h",
+      "when": "8:30〜"
     },
     {
       "id": "kpi",
       "label": "KPI 15フォロー・20リプ（6枠）",
-      "note": "勉強の合間の気分転換に",
+      "note": "勉強の合間に",
       "when": "6枠"
     },
     {
-      "id": "dent",
-      "label": "神経の歯医者を予約",
-      "note": "電話かWebで10分",
-      "when": "9:00"
+      "id": "kayo",
+      "label": "かよ社長の宿題を15分読む",
+      "note": "考え始めるだけでOK",
+      "when": "15:30"
     }
   ],
   "timeline": [
@@ -105,27 +105,27 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
     },
     {
       "s": "08:00",
-      "e": "09:10",
-      "label": "週次の文章",
-      "task": "→歯医者の予約"
+      "e": "08:30",
+      "label": "週次報告",
+      "task": "スクショ→提出"
     },
     {
-      "s": "09:10",
+      "s": "08:30",
       "e": "12:15",
       "label": "勉強",
-      "task": "10:30 KPI②"
+      "task": "10:00 KPI②"
     },
     {
       "s": "12:15",
-      "e": "16:00",
-      "label": "昼ごはん→勉強",
-      "task": "12:45 KPI③・14:30 ④"
+      "e": "15:15",
+      "label": "昼→勉強",
+      "task": "12:45 KPI③・14時④"
     },
     {
-      "s": "16:15",
+      "s": "15:30",
       "e": "20:00",
-      "label": "勉強1.5h→KPI⑤",
-      "task": "→晩ごはん→お風呂"
+      "label": "かよ社長",
+      "task": "→18時 KPI⑤→晩ご飯"
     },
     {
       "s": "22:30",
@@ -136,22 +136,22 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
   ],
   "deadlines": [
     {
-      "d": "10/11（日）12:00",
+      "d": "今日12:00",
       "label": "週次報告を提出",
-      "prep": "今日のうちに文章まで",
-      "days": 1
+      "prep": "朝のうちに",
+      "days": 0
     },
     {
       "d": "10/14（水）",
       "label": "薬剤師 評価テスト",
-      "prep": "今日7h・明日5h・月曜コメダ",
-      "days": 4
+      "prep": "明日はコメダで勉強",
+      "days": 3
     },
     {
       "d": "10/17（土）",
       "label": "投稿（10/18分）提出",
       "prep": "テスト明けから作成",
-      "days": 7
+      "days": 6
     }
   ],
   "decisions": [
@@ -161,7 +161,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明日 10/11（日）</b> 週次を提出→勉強5時間"
+  "tomorrow": "<b>明日 10/12（月）</b> 9:00〜16:30 コメダで勉強"
 }
 </script>
 
