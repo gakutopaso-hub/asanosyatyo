@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+html,body{margin:0;width:390px;height:844px;overflow:hidden}
+body{background:radial-gradient(120% 80% at 70% 20%,#2a3f6b 0%,#141c2e 55%,#0b0f18 100%);font-family:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans CJK JP",sans-serif;color:#f3eee3;position:relative}
+.card{position:absolute;left:18px;right:18px;top:318px;max-height:396px;overflow:hidden;background:rgba(10,14,24,.62);border:1px solid rgba(214,180,106,.55);border-radius:18px;padding:12px 14px;box-sizing:border-box}
+h1{margin:0 0 6px;font-size:13px;letter-spacing:.12em;color:#d6b46a;font-weight:700;display:flex;justify-content:space-between}
+ul{list-style:none;margin:0;padding:0}
+li{display:grid;grid-template-columns:52px 1fr;gap:6px;font-size:13.5px;line-height:1.25;padding:4.6px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+li:last-child{border-bottom:0}
+.t{color:#d6b46a;font-weight:700;font-variant-numeric:tabular-nums}
+.kpi{color:#8fc7ff;font-weight:700}
+.must{font-weight:900}
+.job{color:#9aa3b2}
+</style></head><body>
+<div class="card"><h1><span id="title"></span><span id="bed"></span></h1><ul id="rows"></ul></div>
+<script>
+const d = window.__DATA__;
+document.getElementById('title').textContent = d.title;
+document.getElementById('bed').textContent = d.bed || '23:30 就寝';
+const ul = document.getElementById('rows');
+d.rows.forEach(r => {
+  const li = document.createElement('li');
+  const t = document.createElement('span'); t.className = 't'; t.textContent = r.t;
+  const x = document.createElement('span'); x.className = r.kind || ''; x.textContent = r.text;
+  li.append(t, x); ul.append(li);
+});
+</script></body></html>

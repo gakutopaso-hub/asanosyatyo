@@ -55,3 +55,13 @@
 - `lead` はその日いちばん大事な一言（例:「今日は週次報告の締切。12時までに提出」）。
 - `must` の各項目は 3〜4 件まで。`timeline` は 5 行まで。長い文は切る。
 - 書き換えたら 390×664 で縦に収まるか確認 → 同じパスで Artifact を再公開 → git commit & push。
+
+## 待受画像（2026-10-11 代表の指示: 毎日作る）
+段取り表と同じ内容で、iPhone 13 の待受画像（1170×2532）も毎晩作る。
+- 置き場: `secretary/brief/wallpaper/YYYY-MM-DD.json`（データ）→ `YYYY-MM-DD.png`（画像）
+- 作り方: `cd secretary/brief/wallpaper && NODE_PATH=$(npm root -g) node render.js YYYY-MM-DD.json YYYY-MM-DD.png`
+  - データ: `{"title":"10/12（月）の段取り","bed":"23:30 就寝","rows":[{"t":"07:00","text":"…","kind":"must|kpi|job"}]}`
+  - **行は12行まで**、1行は全角18字程度まで（`OVERFLOW` と出たら削る）。時刻は1日全体（起床〜就寝）を生活時間込みで
+  - kind: `must`=今日の締切・提出（太字）／`kpi`=KPI枠（水色）／`job`=勤務（灰色）
+- 配置は代表のロック画面に合わせ済み（上37%＝時計・ウィジェット、下13%＝ライト・カメラを避ける）。デザインは変えない
+- できた画像は SendUserFile（display: render）で代表に送る
