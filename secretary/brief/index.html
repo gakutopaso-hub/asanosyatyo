@@ -65,18 +65,12 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 <!-- 秘書が毎朝この JSON だけを書き換える -->
 <script id="brief" type="application/json">
 {
-  "date": "2026-10-21",
-  "label": "10/21（水）",
+  "date": "2026-10-22",
+  "label": "10/22（木）",
   "wake": "6:30",
   "updated": "前夜22:00作成",
-  "lead": "夜は投稿作成。福岡（10/24〜）の前に進める",
+  "lead": "帰宅21時。夜はKPIとお風呂で手一杯",
   "must": [
-    {
-      "id": "post",
-      "label": "投稿作成（10/27提出分）1時間45分",
-      "note": "福岡の前に仕上げる",
-      "when": "20:00〜"
-    },
     {
       "id": "kpi",
       "label": "KPI 15フォロー・20リプ（6枠）",
@@ -84,8 +78,14 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "when": "6枠"
     },
     {
+      "id": "post",
+      "label": "投稿の続き 15分",
+      "note": "帰りの電車でKPIのあと",
+      "when": "電車"
+    },
+    {
       "id": "weekly",
-      "label": "福岡中の週次報告をどうするか決める",
+      "label": "福岡中の週次報告の方針（済なら✓）",
       "note": "前倒し or 旅先で提出",
       "when": "電車"
     }
@@ -99,32 +99,32 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
     },
     {
       "s": "07:45",
-      "e": "19:00",
-      "label": "勤務8:45〜",
-      "task": "電車でKPI②③",
+      "e": "21:00",
+      "label": "勤務8:45〜19:45",
+      "task": "電車でKPI②③・投稿",
       "kind": "job"
     },
     {
-      "s": "19:00",
-      "e": "20:00",
+      "s": "21:00",
+      "e": "22:00",
       "label": "晩ごはん",
       "task": ""
     },
     {
-      "s": "20:00",
-      "e": "22:00",
-      "label": "投稿作成",
-      "task": "21:00 KPI④で休憩"
-    },
-    {
       "s": "22:00",
-      "e": "23:10",
-      "label": "KPI⑤→お風呂→KPI⑥",
+      "e": "22:45",
+      "label": "KPI④→お風呂",
       "task": ""
     },
     {
-      "s": "23:10",
-      "e": "23:30",
+      "s": "22:45",
+      "e": "23:20",
+      "label": "KPI⑤→スプシ→KPI⑥",
+      "task": ""
+    },
+    {
+      "s": "23:20",
+      "e": "23:40",
       "label": "予祝・振り返り",
       "task": "→就寝"
     }
@@ -133,20 +133,20 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
     {
       "d": "10/24（土）",
       "label": "⚠️福岡と週次が重なる",
-      "prep": "今日中に方針を決める",
-      "days": 3
+      "prep": "方針を決める",
+      "days": 2
     },
     {
       "d": "10/27（火）",
       "label": "投稿（10/28分）提出",
       "prep": "福岡の前に作る",
-      "days": 6
+      "days": 5
     },
     {
       "d": "10/27（火）22:00",
       "label": "X運用MT",
       "prep": "",
-      "days": 6
+      "days": 5
     }
   ],
   "decisions": [
@@ -156,7 +156,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明日 10/22（木）</b> 8:45〜19:45勤務、帰宅21時"
+  "tomorrow": "<b>明日 10/23（金）</b> 8:45〜19:30勤務→夜に福岡の荷造り"
 }
 </script>
 
