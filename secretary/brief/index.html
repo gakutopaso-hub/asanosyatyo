@@ -65,23 +65,23 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 <!-- 秘書が毎朝この JSON だけを書き換える -->
 <script id="brief" type="application/json">
 {
-  "date": "2026-10-22",
-  "label": "10/22（木）",
-  "wake": "6:30",
+  "date": "2026-10-23",
+  "label": "10/23（金）",
+  "wake": "6:15",
   "updated": "前夜22:00作成",
-  "lead": "帰宅21時。夜はKPIとお風呂で手一杯",
+  "lead": "朝に福岡の荷造り。⚠️旅行中の週次報告の方針",
   "must": [
+    {
+      "id": "pack",
+      "label": "福岡の荷造り（20分）",
+      "note": "朝のKPI①のあと",
+      "when": "7:15"
+    },
     {
       "id": "kpi",
       "label": "KPI 15フォロー・20リプ（6枠）",
       "note": "朝1・電車2・夜3",
       "when": "6枠"
-    },
-    {
-      "id": "post",
-      "label": "投稿の続き 15分",
-      "note": "帰りの電車でKPIのあと",
-      "when": "電車"
     },
     {
       "id": "weekly",
@@ -92,16 +92,16 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
   ],
   "timeline": [
     {
-      "s": "06:30",
+      "s": "06:15",
       "e": "07:45",
-      "label": "支度・朝ごはん",
-      "task": "→7:15 KPI①"
+      "label": "支度→KPI①→荷造り",
+      "task": ""
     },
     {
       "s": "07:45",
       "e": "21:00",
-      "label": "勤務8:45〜19:45",
-      "task": "電車でKPI②③・投稿",
+      "label": "勤務8:45〜19:30",
+      "task": "電車でKPI②③",
       "kind": "job"
     },
     {
@@ -131,22 +131,22 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
   ],
   "deadlines": [
     {
-      "d": "10/24（土）",
-      "label": "⚠️福岡と週次が重なる",
-      "prep": "方針を決める",
-      "days": 2
+      "d": "10/24（土）〜26",
+      "label": "福岡",
+      "prep": "週次の文章・提出が重なる",
+      "days": 1
     },
     {
       "d": "10/27（火）",
       "label": "投稿（10/28分）提出",
-      "prep": "福岡の前に作る",
-      "days": 5
+      "prep": "福岡から戻ってすぐ",
+      "days": 4
     },
     {
       "d": "10/27（火）22:00",
       "label": "X運用MT",
       "prep": "",
-      "days": 5
+      "days": 4
     }
   ],
   "decisions": [
@@ -156,7 +156,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明日 10/23（金）</b> 8:45〜19:30勤務→夜に福岡の荷造り"
+  "tomorrow": "<b>明日 10/24（土）〜26（月）</b> 福岡"
 }
 </script>
 
