@@ -64,68 +64,67 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 
 <!-- 秘書が毎朝この JSON だけを書き換える -->
 <script id="brief" type="application/json">{
-  "date": "2026-10-26",
-  "label": "10/26（月）午後",
-  "wake": "—",
-  "updated": "10/26 昼に更新",
-  "lead": "14時から投稿に集中。約5時間半とれる",
+  "date": "2026-10-27",
+  "label": "10/27（火）",
+  "wake": "6:30",
+  "updated": "前夜22:00作成",
+  "lead": "朝に投稿を提出。夜は20時堀さん・22時X運用MT",
   "must": [
     {
       "id": "post",
-      "label": "投稿（10/28分）を仕上げる",
-      "note": "明日は夜にMTGが2つ",
-      "when": "14:45〜"
+      "label": "投稿（10/28分）を提出",
+      "note": "仕上げが残れば通勤中に",
+      "when": "朝の通勤"
     },
     {
       "id": "kpi",
-      "label": "KPI 残りの枠",
-      "note": "済んだ分は飛ばす",
-      "when": "③〜⑥"
+      "label": "KPI 15フォロー・20リプ（6枠）",
+      "note": "",
+      "when": "6枠"
     },
     {
-      "id": "bath",
-      "label": "湯船でリフレッシュ",
+      "id": "mtg",
+      "label": "20:00 堀さんMTG／22:00 X運用MT",
       "note": "",
-      "when": "21:45"
+      "when": "夜"
     }
   ],
   "timeline": [
     {
-      "s": "14:00",
-      "e": "14:45",
-      "label": "片付け・御札を飾る",
-      "task": "→14:30 KPI③"
+      "s": "06:30",
+      "e": "07:45",
+      "label": "支度・朝ごはん",
+      "task": "7:15 KPI①→出発準備"
     },
     {
-      "s": "14:45",
-      "e": "18:00",
-      "label": "投稿づくり",
-      "task": "16:15 KPI④・休憩",
+      "s": "07:45",
+      "e": "08:45",
+      "label": "通勤",
+      "task": "KPI②→投稿を提出",
       "kind": "must"
     },
     {
-      "s": "18:00",
-      "e": "18:45",
-      "label": "KPI⑤→晩ごはん30分",
+      "s": "08:45",
+      "e": "17:30",
+      "label": "仕事",
+      "task": "昼休みにKPI③"
+    },
+    {
+      "s": "17:30",
+      "e": "20:00",
+      "label": "帰り道KPI④→晩ごはん",
       "task": ""
     },
     {
-      "s": "18:45",
-      "e": "21:45",
-      "label": "投稿づくり→仕上げ",
-      "task": "20:15 KPI⑥",
-      "kind": "must"
+      "s": "20:00",
+      "e": "22:00",
+      "label": "堀さんMTG",
+      "task": "→KPI⑤・お風呂・KPI⑥"
     },
     {
-      "s": "21:45",
-      "e": "22:30",
-      "label": "お風呂（湯船）",
-      "task": ""
-    },
-    {
-      "s": "22:30",
+      "s": "22:00",
       "e": "23:30",
-      "label": "明日の準備・自由",
+      "label": "X運用MT",
       "task": "23:10 予祝→就寝"
     }
   ],
@@ -133,20 +132,20 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
     {
       "d": "10/27（火）",
       "label": "投稿（10/28分）提出",
-      "prep": "今夜仕上げ→朝に提出",
-      "days": 1
+      "prep": "朝の通勤中に",
+      "days": 0
     },
     {
       "d": "10/31（土）20:00",
       "label": "かよさんMTG",
-      "prep": "宿題は10/31午前に",
-      "days": 5
+      "prep": "宿題は10/31午前",
+      "days": 4
     },
     {
       "d": "11/1（日）",
       "label": "週次報告＋月次報告",
       "prep": "10/31に下書き",
-      "days": 6
+      "days": 5
     }
   ],
   "decisions": [
@@ -156,7 +155,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明日 10/27（火）</b> 8:45出勤。夜20時堀さん・22時X運用MT"
+  "tomorrow": "<b>明日 10/28（水）</b> 8:45出勤。堀さんと投稿の修正日"
 }</script>
 
 <script>
