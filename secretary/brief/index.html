@@ -66,48 +66,49 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 <script id="brief" type="application/json">{
   "date": "2026-11-01",
   "label": "11/1（日）休み",
-  "wake": "7:00",
-  "updated": "10/31 夜に更新",
-  "lead": "週次→月初参り→カフェで月次。掃除3hは11/3へ",
+  "wake": "6:30",
+  "updated": "10/31 夜に再更新",
+  "lead": "午前に週次と月初参り。掃除3hは明日の午前",
   "must": [
     {
       "id": "weekly",
       "label": "週次報告（2h）を提出",
       "note": "〆11:30。参拝の前に出す",
-      "when": "8:00"
+      "when": "7:30"
+    },
+    {
+      "id": "mairi",
+      "label": "藤森神社へ月初参り",
+      "note": "帰りに洗剤→洗濯",
+      "when": "10:15"
     },
     {
       "id": "monthly",
       "label": "月次報告（3h）を提出",
-      "note": "カフェで。明日は修正日",
+      "note": "カフェで",
       "when": "14:00"
-    },
-    {
-      "id": "kpi",
-      "label": "KPI 15フォロー・20リプ（6枠）",
-      "note": "",
-      "when": "6枠"
     }
   ],
   "timeline": [
     {
-      "s": "07:00",
-      "e": "10:15",
+      "s": "06:30",
+      "e": "09:45",
       "label": "朝ごはん→週次報告",
-      "task": "9:00 KPI①",
+      "task": "8:30 KPI①",
       "kind": "must"
     },
     {
-      "s": "10:15",
-      "e": "12:30",
-      "label": "用意→藤森神社へ月初参り",
-      "task": "帰りに洗剤"
+      "s": "09:45",
+      "e": "12:00",
+      "label": "用意→月初参り→洗剤",
+      "task": "",
+      "kind": "must"
     },
     {
-      "s": "12:30",
+      "s": "12:00",
       "e": "14:00",
-      "label": "昼→カフェ→KPI②",
-      "task": "ランチ予約・質問送信"
+      "label": "洗濯→昼→干す→カフェ",
+      "task": "KPI②・予約・質問送信"
     },
     {
       "s": "14:00",
@@ -119,23 +120,23 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
     {
       "s": "17:30",
       "e": "21:00",
-      "label": "スーパー→KPI⑤→晩ごはん",
-      "task": "20:00 KPI⑥→湯船"
+      "label": "スーパー→晩ごはん→湯船",
+      "task": "18:15 KPI⑤・20:00 ⑥"
     },
     {
       "s": "21:00",
       "e": "23:30",
-      "label": "1000万部屋 授業",
+      "label": "1000万部屋 授業（〜22時）",
       "task": "23:10 予祝→就寝",
       "kind": "must"
     }
   ],
   "deadlines": [
     {
-      "d": "11/3（火・祝）",
-      "label": "玄関・洗面所・部屋の掃除",
-      "prep": "今日から移動（3h）",
-      "days": 2
+      "d": "11/2（月）午前",
+      "label": "玄関・洗面所・部屋の掃除（3h）",
+      "prep": "8:00〜11:15",
+      "days": 1
     },
     {
       "d": "11/7（土）",
@@ -157,7 +158,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明日 11/2（月）</b> 14:30〜19:30勤務。月次の修正日"
+  "tomorrow": "<b>明日 11/2（月）</b> 午前に掃除3h→13:30出発"
 }</script>
 
 <script>
