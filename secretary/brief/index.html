@@ -64,23 +64,23 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 
 <!-- 秘書が毎朝この JSON だけを書き換える -->
 <script id="brief" type="application/json">{
-  "date": "2026-10-31",
-  "label": "10/31（土）休み",
+  "date": "2026-11-01",
+  "label": "11/1（日）休み",
   "wake": "7:30",
   "updated": "前夜22:00作成",
-  "lead": "午前に週次とかよさん宿題。夜20時かよさんMTG",
+  "lead": "⚠️11/8 神社部10時と週次〆が重なる。今日は報告2つを提出",
   "must": [
     {
       "id": "weekly",
-      "label": "週次報告の文章（明日12時〆）",
-      "note": "土曜の午前に完成させる",
+      "label": "週次報告を提出（12時〆）",
+      "note": "文章にスクショを貼る",
       "when": "8:30"
     },
     {
-      "id": "kayo",
-      "label": "かよさんの宿題（2時間）",
-      "note": "20時のMTGで使う",
-      "when": "9:40"
+      "id": "monthly",
+      "label": "月次報告（10月分）を提出",
+      "note": "明日は修正日",
+      "when": "9:15"
     },
     {
       "id": "kpi",
@@ -92,39 +92,37 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
   "timeline": [
     {
       "s": "07:30",
-      "e": "09:30",
+      "e": "08:30",
       "label": "支度・朝ごはん→KPI①",
-      "task": "8:30 週次の文章",
+      "task": ""
+    },
+    {
+      "s": "08:30",
+      "e": "10:45",
+      "label": "週次を提出→月次を提出",
+      "task": "",
       "kind": "must"
     },
     {
-      "s": "09:40",
-      "e": "12:00",
-      "label": "かよさんの宿題",
-      "task": "10:40 KPI②",
-      "kind": "must"
+      "s": "10:45",
+      "e": "13:00",
+      "label": "KPI②→休憩→昼",
+      "task": "12:30 KPI③"
     },
     {
-      "s": "12:00",
-      "e": "14:30",
-      "label": "昼→KPI③→月次の下書き",
-      "task": "14:15 KPI④"
-    },
-    {
-      "s": "15:00",
-      "e": "18:30",
+      "s": "13:00",
+      "e": "17:00",
       "label": "11/7分の投稿づくり",
-      "task": "17:00 KPI⑤→自由"
+      "task": "15:00 KPI④・休憩"
     },
     {
-      "s": "18:30",
-      "e": "21:30",
-      "label": "晩ごはん→かよさんMTG",
-      "task": "20:00〜21:30",
-      "kind": "must"
+      "s": "17:00",
+      "e": "21:00",
+      "label": "KPI⑤→自由→晩ごはん",
+      "task": ""
     },
     {
-      "s": "21:30",
+      "s": "21:00",
       "e": "23:30",
       "label": "KPI⑥→お風呂→自由",
       "task": "23:10 予祝→就寝"
@@ -134,19 +132,19 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
     {
       "d": "11/1（日）12:00",
       "label": "週次報告を提出",
-      "prep": "明日の午前に文章",
-      "days": 1
-    },
-    {
-      "d": "11/1（日）",
-      "label": "月次報告（10月分）",
-      "prep": "明日の午後に下書き",
-      "days": 1
+      "prep": "朝8:30",
+      "days": 0
     },
     {
       "d": "11/7（土）",
       "label": "投稿提出（9-13時勤務の日）",
-      "prep": "早めに作る",
+      "prep": "今日から作る",
+      "days": 6
+    },
+    {
+      "d": "11/8（日）",
+      "label": "週次〆と神社部10-14時",
+      "prep": "週次は前日に提出",
       "days": 7
     }
   ],
@@ -157,7 +155,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明日 11/1（日）</b> 週次をスクショ付きで提出・月次を提出"
+  "tomorrow": "<b>明日 11/2（月）</b> 14:30〜19:30勤務。月次の修正日"
 }</script>
 
 <script>
