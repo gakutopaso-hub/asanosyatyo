@@ -64,69 +64,68 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 
 <!-- 秘書が毎朝この JSON だけを書き換える -->
 <script id="brief" type="application/json">{
-  "date": "2026-11-03",
-  "label": "11/3（火・祝）休み",
-  "wake": "7:30",
+  "date": "2026-11-04",
+  "label": "11/4（水）",
+  "wake": "6:30",
   "updated": "前夜22:00作成",
-  "lead": "投稿づくりを5時間で一気に。⚠️11/5 帰宅直後に尾崎さんMTG",
+  "lead": "夜22時メンターMTG。⚠️明日は帰宅直後に尾崎さんMTG",
   "must": [
     {
+      "id": "mtg",
+      "label": "22:00 メンターMTG",
+      "note": "〜23:00",
+      "when": "22:00"
+    },
+    {
       "id": "post",
-      "label": "11/7分の投稿づくり（5h）",
-      "note": "11/7は9-13時勤務の日",
-      "when": "8:30"
+      "label": "11/7分の投稿の仕上げ",
+      "note": "残っていれば",
+      "when": "20:15"
     },
     {
       "id": "kpi",
       "label": "KPI 15フォロー・20リプ（6枠）",
       "note": "",
       "when": "6枠"
-    },
-    {
-      "id": "rest",
-      "label": "午後後半はしっかり休む",
-      "note": "",
-      "when": "15:30〜"
     }
   ],
   "timeline": [
     {
-      "s": "07:30",
-      "e": "08:30",
-      "label": "支度・朝ごはん→KPI①",
+      "s": "06:30",
+      "e": "07:45",
+      "label": "支度・朝ごはん",
+      "task": "7:15 KPI①→出発準備"
+    },
+    {
+      "s": "07:45",
+      "e": "17:30",
+      "label": "通勤KPI②→仕事",
+      "task": "昼休みにKPI③"
+    },
+    {
+      "s": "17:30",
+      "e": "20:00",
+      "label": "帰り道KPI④→晩ごはん",
+      "task": "19時帰宅"
+    },
+    {
+      "s": "20:00",
+      "e": "21:30",
+      "label": "KPI⑤→投稿の仕上げ",
+      "task": "21:00 お風呂"
+    },
+    {
+      "s": "21:30",
+      "e": "22:00",
+      "label": "KPI⑥→MTGの準備",
       "task": ""
     },
     {
-      "s": "08:30",
-      "e": "12:00",
-      "label": "投稿づくり",
-      "task": "10:30 KPI②・休憩",
-      "kind": "must"
-    },
-    {
-      "s": "12:00",
-      "e": "13:00",
-      "label": "昼ごはん→KPI③",
-      "task": ""
-    },
-    {
-      "s": "13:00",
-      "e": "15:30",
-      "label": "投稿づくり",
-      "task": "15:00 KPI④",
-      "kind": "must"
-    },
-    {
-      "s": "15:30",
-      "e": "21:00",
-      "label": "自由→KPI⑤→晩ごはん",
-      "task": "17:00 KPI⑤・18:30 晩"
-    },
-    {
-      "s": "21:00",
+      "s": "22:00",
       "e": "23:30",
-      "label": "KPI⑥→お風呂→自由",
-      "task": "23:10 予祝→就寝"
+      "label": "メンターMTG",
+      "task": "23:10 予祝→就寝",
+      "kind": "must"
     }
   ],
   "deadlines": [
@@ -134,18 +133,18 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "d": "11/5（木）21:30",
       "label": "尾崎さんMTG（帰宅21:15ごろ）",
       "prep": "晩ごはんはMTG後",
-      "days": 2
+      "days": 1
     },
     {
       "d": "11/7（土）",
-      "label": "投稿提出（9-13時勤務の日）",
-      "prep": "今日つくる",
-      "days": 4
+      "label": "投稿提出・週次も提出",
+      "prep": "9-13時勤務の後",
+      "days": 3
     },
     {
-      "d": "11/8（日）",
-      "label": "週次〆と神社部10-14時",
-      "prep": "週次は11/7に提出",
+      "d": "11/9（月）11:00",
+      "label": "吉田歯医者",
+      "prep": "紹介状・3万円",
       "days": 5
     }
   ],
@@ -156,7 +155,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明日 11/4（水）</b> 8:45〜17:30勤務。22時メンターMTG"
+  "tomorrow": "<b>明日 11/5（木）</b> 〜19:45勤務。21:30尾崎さんMTG"
 }</script>
 
 <script>
