@@ -64,23 +64,23 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 
 <!-- 秘書が毎朝この JSON だけを書き換える -->
 <script id="brief" type="application/json">{
-  "date": "2026-11-07",
-  "label": "11/7（土）",
-  "wake": "6:45",
+  "date": "2026-11-08",
+  "label": "11/8（日）西日本神社部",
+  "wake": "7:00",
   "updated": "前夜22:00作成",
-  "lead": "9-13時勤務のあと、投稿と週次報告を提出（明日は神社部）",
+  "lead": "10時から伏見稲荷で神社部。ランチはキムラヤ",
   "must": [
     {
-      "id": "post",
-      "label": "投稿を最終チェック→提出",
-      "note": "今日が提出日",
-      "when": "14:30"
+      "id": "left",
+      "label": "今日の残り：週次報告",
+      "note": "未提出なら朝8時に（〆11:30）",
+      "when": "8:00"
     },
     {
-      "id": "weekly",
-      "label": "週次報告（2h）を提出",
-      "note": "明日は神社部なので今日中に",
-      "when": "16:00"
+      "id": "jinja",
+      "label": "西日本神社部（伏見稲荷）",
+      "note": "ランチ：イタリアンバー キムラヤ",
+      "when": "10:00"
     },
     {
       "id": "kpi",
@@ -91,35 +91,35 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
   ],
   "timeline": [
     {
-      "s": "06:45",
+      "s": "07:00",
       "e": "08:00",
-      "label": "支度・朝ごはん",
-      "task": "7:30 KPI①→出発準備"
+      "label": "支度・朝ごはん→KPI①",
+      "task": ""
     },
     {
       "s": "08:00",
-      "e": "13:00",
-      "label": "通勤KPI②→仕事",
-      "task": "9:00〜13:00"
+      "e": "09:30",
+      "label": "（未提出なら）週次報告",
+      "task": "9:00 KPI②→出発準備"
     },
     {
-      "s": "13:00",
-      "e": "14:30",
-      "label": "帰り道KPI③→昼ごはん",
-      "task": "14時帰宅"
-    },
-    {
-      "s": "14:30",
-      "e": "18:00",
-      "label": "投稿を提出→週次報告",
-      "task": "15:30 KPI④・休憩",
+      "s": "09:30",
+      "e": "14:00",
+      "label": "西日本神社部（伏見稲荷）",
+      "task": "ランチ：キムラヤ",
       "kind": "must"
     },
     {
-      "s": "18:00",
+      "s": "14:00",
+      "e": "17:00",
+      "label": "帰り道KPI③→休憩",
+      "task": "15:30 KPI④"
+    },
+    {
+      "s": "17:00",
       "e": "21:00",
-      "label": "KPI⑤→明日の準備→晩ごはん",
-      "task": ""
+      "label": "KPI⑤→自由→晩ごはん",
+      "task": "18:30 晩ごはん"
     },
     {
       "s": "21:00",
@@ -130,22 +130,22 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
   ],
   "deadlines": [
     {
-      "d": "11/8（日）10:00",
-      "label": "西日本神社部・伏見稲荷",
-      "prep": "ランチ8名の予約を確認",
-      "days": 1
-    },
-    {
       "d": "11/9（月）11:00",
       "label": "吉田歯医者",
       "prep": "紹介状・3万円",
+      "days": 1
+    },
+    {
+      "d": "11/10（火）",
+      "label": "晩ごはんのお店を予約",
+      "prep": "候補：栞屋ほか",
       "days": 2
     },
     {
       "d": "11/14（土）16:00",
       "label": "脱疲労会",
-      "prep": "",
-      "days": 7
+      "prep": "週次は朝に",
+      "days": 6
     }
   ],
   "decisions": [
@@ -155,7 +155,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明日 11/8（日）</b> 10-14時 西日本神社部（伏見稲荷）"
+  "tomorrow": "<b>明日 11/9（月）</b> 11時 吉田歯医者→14:30勤務→22時堀さん"
 }</script>
 
 <script>
