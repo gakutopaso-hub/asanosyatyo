@@ -64,68 +64,61 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 
 <!-- 秘書が毎朝この JSON だけを書き換える -->
 <script id="brief" type="application/json">{
-  "date": "2026-11-15",
-  "label": "11/15（日）",
-  "wake": "7:30",
+  "date": "2026-11-16",
+  "label": "11/16（月）",
+  "wake": "7:00",
   "updated": "前夜22:00作成",
-  "lead": "11〜16時イベント。夕方から11/17分の投稿づくり",
+  "lead": "午前に投稿を仕上げる（明日提出・夜はX運用MT）。14:30勤務",
   "must": [
     {
-      "id": "left",
-      "label": "今日の残り：週次報告",
-      "note": "未提出なら朝に（〆11:30）",
-      "when": "8:30"
-    },
-    {
-      "id": "event",
-      "label": "11:00 イベント",
-      "note": "〜16:00",
-      "when": "11:00"
-    },
-    {
       "id": "post",
-      "label": "11/17分の投稿づくり",
-      "note": "17日の夜はX運用MT",
-      "when": "17:00"
+      "label": "11/17分の投稿を仕上げる",
+      "note": "明日の夜はX運用MTで時間がない",
+      "when": "8:00"
+    },
+    {
+      "id": "kpi",
+      "label": "KPI 15フォロー・20リプ（6枠）",
+      "note": "",
+      "when": "6枠"
     }
   ],
   "timeline": [
     {
-      "s": "07:30",
-      "e": "09:30",
+      "s": "07:00",
+      "e": "08:00",
       "label": "支度・朝ごはん→KPI①",
-      "task": "8:30 週次（未提出なら）"
-    },
-    {
-      "s": "09:30",
-      "e": "10:30",
-      "label": "KPI②→KPI③→出発準備",
       "task": ""
     },
     {
-      "s": "11:00",
-      "e": "16:00",
-      "label": "イベント",
-      "task": "",
+      "s": "08:00",
+      "e": "12:30",
+      "label": "投稿づくり→仕上げ",
+      "task": "9:30 KPI②・11:30 ③",
       "kind": "must"
     },
     {
-      "s": "16:00",
-      "e": "19:00",
-      "label": "帰り道KPI④→投稿づくり",
-      "task": "18:00 KPI⑤",
-      "kind": "must"
+      "s": "12:30",
+      "e": "13:30",
+      "label": "昼→KPI④→出発準備",
+      "task": ""
     },
     {
-      "s": "19:00",
-      "e": "21:15",
-      "label": "晩ごはん→投稿の仕上げ",
-      "task": "21:00 KPI⑥"
+      "s": "13:30",
+      "e": "19:30",
+      "label": "通勤KPI⑤→仕事",
+      "task": "14:30〜19:30"
     },
     {
-      "s": "21:15",
+      "s": "19:30",
+      "e": "22:30",
+      "label": "帰り道KPI⑥→晩ごはん→お風呂",
+      "task": "21時帰宅"
+    },
+    {
+      "s": "22:30",
       "e": "23:30",
-      "label": "お風呂→自由",
+      "label": "自由",
       "task": "23:10 予祝→就寝"
     }
   ],
@@ -133,20 +126,20 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
     {
       "d": "11/17（火）",
       "label": "投稿提出・22時X運用MT",
-      "prep": "今日と明日の午前に",
-      "days": 2
+      "prep": "今日の午前に仕上げ",
+      "days": 1
     },
     {
       "d": "11/22（日）17:00",
       "label": "イースマイル",
       "prep": "週次は朝に",
-      "days": 7
+      "days": 6
     },
     {
-      "d": "11/24（火）",
-      "label": "経営スクール宿題",
-      "prep": "内容を教えてください",
-      "days": 9
+      "d": "11/23（月・祝）21:00",
+      "label": "地域創生メンターMTG→22時堀さん",
+      "prep": "",
+      "days": 7
     }
   ],
   "decisions": [
@@ -156,7 +149,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明日 11/16（月）</b> 14:30〜19:30勤務。午前は投稿づくり"
+  "tomorrow": "<b>明日 11/17（火）</b> 投稿提出。夜22時X運用MT"
 }</script>
 
 <script>
