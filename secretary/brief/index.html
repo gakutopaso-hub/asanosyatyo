@@ -64,57 +64,57 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 
 <!-- 秘書が毎朝この JSON だけを書き換える -->
 <script id="brief" type="application/json">{
-  "date": "2026-11-21",
-  "label": "11/21（土）",
+  "date": "2026-11-22",
+  "label": "11/22（日）",
   "wake": "7:30",
   "updated": "前夜22:00作成",
-  "lead": "午前に週次と経営スクール宿題。午後は「京香」",
+  "lead": "昼に11/27分の投稿づくり。17時イースマイル。⚠️11/29 結婚式と週次〆",
   "must": [
     {
-      "id": "weekly",
-      "label": "週次報告（2h）",
-      "note": "〆は明日11:30。今日出せればベスト",
+      "id": "left",
+      "label": "今日の残り：週次報告",
+      "note": "未提出なら朝に（〆11:30）",
       "when": "8:30"
     },
     {
-      "id": "school",
-      "label": "経営スクール宿題（1h）",
-      "note": "授業は11/24 21:30",
-      "when": "11:15"
+      "id": "post",
+      "label": "11/27分の投稿づくり（約4h）",
+      "note": "27日は19:30勤務＋22時MTG",
+      "when": "10:30"
     },
     {
-      "id": "kpi",
-      "label": "KPI 15フォロー・20リプ（6枠）",
-      "note": "",
-      "when": "6枠"
+      "id": "es",
+      "label": "17:00 イースマイル",
+      "note": "〜18:00",
+      "when": "17:00"
     }
   ],
   "timeline": [
     {
       "s": "07:30",
-      "e": "10:45",
-      "label": "支度・朝ごはん→週次報告",
-      "task": "8:15 KPI①・9:30 ②",
-      "kind": "must"
+      "e": "10:00",
+      "label": "支度・朝ごはん→KPI①",
+      "task": "8:30 週次（未提出なら）"
     },
     {
-      "s": "10:45",
-      "e": "12:15",
-      "label": "KPI③→経営スクール宿題",
+      "s": "10:00",
+      "e": "12:00",
+      "label": "KPI②→投稿づくり",
       "task": "",
       "kind": "must"
     },
     {
-      "s": "12:15",
-      "e": "13:00",
-      "label": "昼ごはん→KPI④",
-      "task": ""
+      "s": "12:00",
+      "e": "16:15",
+      "label": "昼→KPI③→投稿づくり",
+      "task": "14:45 KPI④・休憩",
+      "kind": "must"
     },
     {
-      "s": "13:00",
-      "e": "18:30",
-      "label": "「京香」の予定",
-      "task": "すきまにKPI⑤"
+      "s": "16:15",
+      "e": "18:00",
+      "label": "KPI⑤→イースマイル",
+      "task": "17:00〜18:00"
     },
     {
       "s": "18:30",
@@ -131,22 +131,22 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
   ],
   "deadlines": [
     {
-      "d": "11/22（日）11:30",
-      "label": "週次〆・17時イースマイル",
-      "prep": "今日書く",
-      "days": 1
-    },
-    {
       "d": "11/24（火）21:30",
       "label": "経営スクール",
-      "prep": "宿題は今日",
-      "days": 3
+      "prep": "宿題",
+      "days": 2
     },
     {
       "d": "11/27（金）",
-      "label": "投稿提出・22時アウトプット会MTG",
-      "prep": "22・23日に投稿づくり",
-      "days": 6
+      "label": "投稿提出・22時アウトプット会",
+      "prep": "今日と明日に作る",
+      "days": 5
+    },
+    {
+      "d": "11/29（日）",
+      "label": "結婚式（大阪・受付12:30）と週次〆",
+      "prep": "週次は11/28に",
+      "days": 7
     }
   ],
   "decisions": [
@@ -156,7 +156,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明日 11/22（日）</b> 週次〆11:30・17時イースマイル"
+  "tomorrow": "<b>明日 11/23（月・祝）</b> 21時メンターMTG→22時堀さん"
 }</script>
 
 <script>
