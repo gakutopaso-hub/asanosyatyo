@@ -65,69 +65,68 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 <!-- 秘書が毎朝この JSON だけを書き換える -->
 <script id="brief" type="application/json">
 {
-  "date": "2026-11-23",
-  "label": "11/23（月・祝）",
-  "wake": "7:00",
+  "date": "2026-11-24",
+  "label": "11/24（火）",
+  "wake": "6:30",
   "updated": "前夜22:00作成",
-  "lead": "13時パーマ・16:30投稿作成・夜MTG2本。⚠️11/29 結婚式と週次〆",
+  "lead": "8:45勤務→21:30経営スクール。予祝は授業前の21時に。⚠️11/29 結婚式と週次〆",
   "must": [
     {
       "id": "hw",
-      "label": "経営スクール宿題（明日〆）",
-      "note": "内容が未確認なら朝に確認",
-      "when": "9:00"
+      "label": "経営スクール宿題（今日〆）",
+      "note": "残っていれば昼休みに",
+      "when": "昼"
     },
     {
-      "id": "post",
-      "label": "投稿作成（提出11/25）",
-      "note": "カレンダーの提出日が11/25に",
-      "when": "16:30"
+      "id": "kpi",
+      "label": "KPI 6枠（通勤・昼・帰り・夜）",
+      "note": "21時までに終える",
+      "when": "7:15"
     },
     {
-      "id": "mtg",
-      "label": "21:00 メンターMTG→22:00 堀さん",
-      "note": "〜23:00",
-      "when": "21:00"
+      "id": "es",
+      "label": "21:30 経営スクール",
+      "note": "〜23:30",
+      "when": "21:30"
     }
   ],
   "timeline": [
     {
-      "s": "07:00",
-      "e": "09:00",
-      "label": "支度・朝食→KPI①②",
-      "task": "8:15 FB"
+      "s": "06:30",
+      "e": "07:45",
+      "label": "支度・朝食→KPI①",
+      "task": "出発準備"
     },
     {
-      "s": "09:00",
-      "e": "12:00",
-      "label": "宿題→KPI③",
-      "task": "10:45 投稿",
-      "kind": "must"
+      "s": "07:45",
+      "e": "08:45",
+      "label": "通勤",
+      "task": "KPI②"
     },
     {
-      "s": "12:00",
-      "e": "15:30",
-      "label": "昼→パーマ",
-      "task": "13〜15時・帰りKPI④"
+      "s": "08:45",
+      "e": "17:30",
+      "label": "仕事",
+      "task": "昼休みKPI③",
+      "kind": "job"
     },
     {
-      "s": "15:30",
-      "e": "18:30",
-      "label": "KPI⑤→投稿作成",
-      "task": "16:30〜18:30",
-      "kind": "must"
+      "s": "17:30",
+      "e": "19:00",
+      "label": "帰り道",
+      "task": "KPI④"
     },
     {
-      "s": "18:30",
+      "s": "19:00",
       "e": "21:00",
-      "label": "晩ごはん→KPI⑥→風呂",
-      "task": "MTG準備"
+      "label": "晩ごはん→KPI⑤→風呂",
+      "task": "20:45 KPI⑥"
     },
     {
       "s": "21:00",
       "e": "23:30",
-      "label": "MTG→堀さんMTG",
-      "task": "23:10 予祝",
+      "label": "予祝→経営スクール",
+      "task": "21:30〜23:30",
       "kind": "must"
     }
   ],
@@ -136,19 +135,19 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "d": "11/24（火）",
       "label": "経営スクール",
       "prep": "21:30〜・宿題",
-      "days": 1
+      "days": 0
     },
     {
       "d": "11/25（水）",
       "label": "投稿提出",
-      "prep": "今日夕方に作る",
-      "days": 2
+      "prep": "仕上げは明日夜？",
+      "days": 1
     },
     {
       "d": "11/29（日）",
       "label": "結婚式（大阪・受付12:30）と週次〆",
       "prep": "週次は11/28に",
-      "days": 6
+      "days": 5
     }
   ],
   "decisions": [
@@ -158,7 +157,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明後日 11/24（火）</b> 8:45勤務→21:30経営スクール"
+  "tomorrow": "<b>明後日 11/25（水）</b> 投稿提出・21時おはようMTG→22時尾崎さん"
 }
 </script>
 
