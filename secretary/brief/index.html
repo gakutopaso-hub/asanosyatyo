@@ -65,29 +65,29 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
 <!-- 秘書が毎朝この JSON だけを書き換える -->
 <script id="brief" type="application/json">
 {
-  "date": "2026-11-26",
-  "label": "11/26（木）",
+  "date": "2026-11-27",
+  "label": "11/27（金）",
   "wake": "6:30",
   "updated": "前夜22:00作成",
-  "lead": "8:45〜19:45の長い勤務日。KPIはすき間で。⚠️11/29 結婚式と週次〆",
+  "lead": "投稿予約の日。22時アウトプット会で就寝は23:50（20分オーバー）。⚠️11/29 結婚式と週次〆",
   "must": [
     {
-      "id": "left",
-      "label": "今日の残り：投稿提出",
-      "note": "昨日未提出なら朝の通勤中に",
+      "id": "rsv",
+      "label": "投稿予約",
+      "note": "朝の通勤中か昼休みに",
       "when": "7:45"
     },
     {
       "id": "kpi",
-      "label": "KPI 6枠（朝・昼・帰り・夜）",
-      "note": "昼はKPI→ごはん→KPI",
+      "label": "KPI 6枠（朝・昼・帰り道）",
+      "note": "21時までに終える",
       "when": "7:15"
     },
     {
-      "id": "rest",
-      "label": "23:10 予祝→23:30就寝",
-      "note": "帰宅が遅いので夜は休む",
-      "when": "23:10"
+      "id": "mtg",
+      "label": "22:00 アウトプット会",
+      "note": "〜23:00",
+      "when": "22:00"
     }
   ],
   "timeline": [
@@ -101,52 +101,54 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "s": "07:45",
       "e": "08:45",
       "label": "通勤",
-      "task": "KPI②"
+      "task": "KPI②・投稿予約",
+      "kind": "must"
     },
     {
       "s": "08:45",
-      "e": "19:45",
+      "e": "19:30",
       "label": "仕事",
       "task": "昼KPI③→ごはん→④",
       "kind": "job"
     },
     {
-      "s": "19:45",
-      "e": "21:15",
+      "s": "19:30",
+      "e": "21:00",
       "label": "帰り道",
-      "task": "KPI⑤"
+      "task": "KPI⑤→休憩→⑥"
     },
     {
-      "s": "21:15",
-      "e": "22:45",
-      "label": "晩ごはん→お風呂",
+      "s": "21:00",
+      "e": "22:00",
+      "label": "晩ごはん",
       "task": ""
     },
     {
-      "s": "22:45",
-      "e": "23:30",
-      "label": "KPI⑥→自由",
-      "task": "23:10 予祝"
+      "s": "22:00",
+      "e": "23:50",
+      "label": "アウトプット会→風呂",
+      "task": "23:30 予祝",
+      "kind": "must"
     }
   ],
   "deadlines": [
     {
-      "d": "11/27（金）",
-      "label": "投稿予約・22時アウトプット会",
-      "prep": "",
-      "days": 1
-    },
-    {
       "d": "11/28（土）",
       "label": "週次（前倒し）・16時嵯峨さん",
       "prep": "午前に週次",
+      "days": 1
+    },
+    {
+      "d": "11/29（日）",
+      "label": "結婚式（大阪・受付12:30）",
+      "prep": "週次〆と重なる",
       "days": 2
     },
     {
       "d": "12/1（火）",
-      "label": "月次報告",
+      "label": "月次報告・22時尾崎さん",
       "prep": "11/28・30に作る",
-      "days": 5
+      "days": 4
     }
   ],
   "decisions": [
@@ -156,7 +158,7 @@ ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px
       "mins": 2
     }
   ],
-  "tomorrow": "<b>明後日 11/27（金）</b> 8:45〜19:30勤務→22時アウトプット会"
+  "tomorrow": "<b>明後日 11/28（土）</b> 午前に週次→16時嵯峨さんMTG"
 }
 </script>
 
